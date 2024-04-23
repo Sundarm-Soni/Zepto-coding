@@ -31,8 +31,6 @@
             divElement.classList.add('expense');
             expenseContainer.append(divElement);
         });
-
-        //900 600 300 -600 -400 -200
     }
 
     const distributeExpense = (enteredAmounts) => {
@@ -41,7 +39,6 @@
         let finalDistribution = 0;
 
         enteredAmounts.forEach((amount) => {
-            console.log(amount)
             maxAmount = Math.max(maxAmount, amount.expense);
         });
 
@@ -51,10 +48,7 @@
                 finalDistribution -= amount.expense;
             }
         });
-        console.log(finalDistribution)
         expenseToBeDistributed = finalDistribution / noOfPeople;
-        // 400, 300, 100 
-        // 100/3
 
         const finalSummary = data.map((people) => {
             return {
